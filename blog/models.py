@@ -13,5 +13,5 @@ class Post(models.Model):
         return f'[{self.pk}] {self.title}'
     
     def get_absolute_url(self): # 모델의 레코드별 URL 생성 규칙을 정의
-        return f'/blog/{self.pk}'
+        return f'/blog/{self.pk}' # 각 레코드의 pk값이 넘어온다
         

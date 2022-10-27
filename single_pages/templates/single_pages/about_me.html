@@ -1,25 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>소개 페이지</title>
-</head>
-<body>
-    <nav>
-        <a href="/blog/">Blog</a>
-        <a href="/about_me/">About me</a>
-    </nav>
-
-    <h1>안녕하세요. 김빈입니다.</h1>
-    <hr/>
-    <h2>이력</h2>
-    <p>내용</p>
-    <hr/>
-    <h2>Portfolio</h2>
-    <p>내용</p>
-    <hr/>
-    <p>아직 공사중입니다.</p>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block main_area %}
+<h1>안녕하세요. 김빈입니다.</h1>
+<hr/>
+<h2>이력</h2>
+<p>내용</p>
+<hr/>
+<h2>Portfolio</h2>
+<p>내용</p>
+<hr/>
+<p>아직 공사중입니다.</p>
+{% endblock main_area %}

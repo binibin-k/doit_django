@@ -9,7 +9,7 @@ from .models import Post
 
 class PostList(ListView):
     model = Post # Post 라는 클래스의 데이터를 가져옴
-    template_name = 'blog/index.html'
+    # template_name = 'blog/index.html'
 
 
 # def single_post_page(request, num):
@@ -17,5 +17,5 @@ class PostList(ListView):
 #     return render(request, 'blog/single_post_page.html', {'post':post})
 
 class PostDetail(DetailView):
-    post = Post
-    template_name = 'blog/single_post_page.html'
+    model = Post
+    # template_name = 'blog/single_post_page.html'

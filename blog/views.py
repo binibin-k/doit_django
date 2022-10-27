@@ -9,6 +9,7 @@ from .models import Post
 
 class PostList(ListView):
     model = Post # Post 라는 클래스의 데이터를 가져옴
+    ordering = ['-pk']
     # template_name = 'blog/index.html'
 
 

@@ -1,4 +1,5 @@
 from django.db import models
+import os
 
 # Create your models here.
 class Post(models.Model):
@@ -17,3 +18,9 @@ class Post(models.Model):
     
     def get_absolute_url(self): # 모델의 레코드별 URL 생성 규칙을 정의
         return f'/blog/{self.pk}' # 각 레코드의 pk값이 넘어온다
+    
+    def get_file_name(self):
+        return os.path.basename(self.file_upload.name)
+    
+    def get_file_ext(self):
+        return self.get_file_name().split('.')[-1]

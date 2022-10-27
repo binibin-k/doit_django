@@ -64,8 +64,11 @@
                         <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
                     </header>
                     <!-- Preview image figure-->
-                    <!-- <figure class="mb-4"><img class="img-fluid rounded" src="https://picsum.photos/id/{{ post.pk }}/900/200" alt="..." /></figure> -->
-                    <figure class="mb-4"><img class="img-fluid rounded" src="{{ post.head_image.url }}" alt="..." /></figure>
+                    {% if p.head_image %}
+                        <figure class="mb-4"><img class="img-fluid rounded" src="{{ post.head_image.url }}" alt="..." /></figure>
+                    {% else %}
+                        <figure class="mb-4"><img class="img-fluid rounded" src="https://picsum.photos/id/{{ post.pk }}/900/200" alt="..." /></figure>
+                    {% endif %}
                     <!-- Post content-->
                     <section class="mb-5">
                         <p>{{ post.content }}</p>
